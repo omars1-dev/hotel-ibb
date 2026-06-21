@@ -80,9 +80,6 @@
 ### 📋 تفاصيل الفندق
 ![تفاصيل الفندق](screenshots/details.png)
 
-### 📅 صفحة الحجز
-![صفحة الحجز](screenshots/booking.png)
-
 ### 🧾 حجوزاتي
 ![حجوزاتي](screenshots/dashboard.png)
 
