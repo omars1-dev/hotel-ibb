@@ -1,0 +1,263 @@
+/* ============================================
+   إبّدار - التصميم النهائي الموحّد
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+:root {
+  --green-dark: #0b4632;
+  --green-mid: #146c43;
+  --green-primary: #198754;
+  --gold: #c59b27;
+  --gray-bg: #f7f9fc;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --white: #ffffff;
+  --shadow-card: 0 20px 35px rgba(0, 0, 0, 0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: var(--gray-bg);
+  color: var(--text-dark);
+  min-width: 360px;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* شريط التنقل */
+.navbar {
+  background: linear-gradient(135deg, #0b4632, #146c43) !important;
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  min-height: 80px;
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-brand img { height: 120px; width: auto; }
+.navbar-nav .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0 5px;
+  padding: 8px 18px !important;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff !important;
+}
+
+/* تذييل */
+.footer {
+  background: linear-gradient(135deg, #0b4632, #0a2e1f);
+  color: rgba(255,255,255,0.9);
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 4rem;
+  border-radius: 50px 50px 0 0;
+  text-align: center;
+}
+
+/* قسم الترحيب */
+.hero-section {
+  background: linear-gradient(135deg, #e6f5ee, #fff);
+  padding: 3rem 0 2rem;
+  border-radius: 0 0 40px 40px;
+}
+.hero-title { font-size: 3rem; font-weight: 900; color: var(--green-dark); }
+.hero-subtitle { font-size: 1.3rem; color: var(--text-muted); }
+
+/* بطاقات الفنادق */
+.hotel-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.hotel-card:hover { transform: translateY(-8px); box-shadow: 0 25px 40px rgba(0,0,0,0.1); }
+.card-img-top { height: 220px; object-fit: cover; }
+.card-body { padding: 1.5rem; display: flex; flex-direction: column; flex:1; }
+.card-title { font-size: 1.5rem; font-weight: 700; color: var(--green-dark); }
+.card-text { color: var(--text-muted); }
+.hotel-meta { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+.hotel-price {
+  background: #fff9ef; color: var(--gold); font-weight: 700;
+  padding: 0.4rem 1.2rem; border-radius: 20px;
+}
+
+/* أزرار */
+.btn-outline-green {
+  border: 2px solid var(--green-primary); color: var(--green-primary);
+  padding: 0.5rem 1.5rem; border-radius: 30px; font-weight: 700; transition:0.3s;
+}
+.btn-outline-green:hover { background: var(--green-primary); color: #fff; }
+.btn-solid-green {
+  background: var(--green-primary); color: #fff; border: none;
+  padding: 0.7rem 2rem; border-radius: 30px; font-weight: 700; transition:0.3s;
+}
+.btn-solid-green:hover { background: var(--green-mid); box-shadow: 0 5px 15px rgba(25,135,84,0.4); }
+
+/* صفحة تفاصيل الفندق */
+.detail-img { border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.detail-info h2 { font-size: 2.5rem; font-weight: 900; color: var(--green-dark); }
+.detail-price { font-size: 2rem; font-weight: 700; color: var(--gold); }
+
+/* نماذج */
+.form-control { border-radius: 14px; padding: 14px 18px; font-size: 1rem; border: 1px solid #e2e8f0; }
+.form-control:focus { border-color: var(--green-primary); box-shadow: 0 0 0 4px rgba(25,135,84,0.1); }
+
+/* صفحات تسجيل الدخول والتسجيل */
+.auth-page {
+  background: linear-gradient(135deg, #e6f5ee, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.auth-card {
+  background: #fff;
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  animation: fadeUp 0.5s ease;
+}
+.auth-card h2 { color: var(--green-dark); font-weight: 900; text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+.auth-card .btn-auth {
+  background: var(--green-primary); color: #fff; border: none;
+  padding: 14px; font-size: 1.2rem; font-weight: 700; border-radius: 50px;
+  width: 100%; margin-top: 1.2rem; transition: 0.3s;
+}
+.auth-card .btn-auth:hover { background: var(--green-mid); box-shadow: 0 10px 25px rgba(25,135,84,0.4); }
+.auth-links { text-align: center; margin-top: 1.5rem; color: var(--text-muted); }
+.auth-links a { color: var(--green-mid); font-weight: 700; text-decoration: none; }
+
+/* جدول الحجوزات */
+.booking-table {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.booking-table thead th {
+  background: var(--green-dark);
+  color: #fff;
+  font-weight: 600;
+  padding: 18px;
+  font-size: 1.1rem;
+}
+.booking-table tbody td {
+  padding: 16px 18px;
+  vertical-align: middle;
+}
+.status-badge {
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ========== تنسيقات الوضع الليلي ========== */
+
+/* خلفية عامة أخف قليلاً */
+[data-bs-theme="dark"] body {
+    background-color: #1a1d20;
+}
+
+/* قسم الترحيب */
+[data-bs-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #1e2a24 0%, #1a1d20 100%);
+}
+[data-bs-theme="dark"] .hero-title {
+    color: #8fdfb4;
+}
+[data-bs-theme="dark"] .hero-subtitle {
+    color: #b0b0b0;
+}
+
+/* شريط التنقل بلون أخضر داكن جداً */
+[data-bs-theme="dark"] .navbar {
+    background: linear-gradient(135deg, #0a2e1f 0%, #0b4632 100%) !important;
+}
+
+/* بطاقات الفنادق */
+[data-bs-theme="dark"] .hotel-card {
+    background: #242729;
+    border: 1px solid #333;
+}
+[data-bs-theme="dark"] .card-title {
+    color: #b8e4cc;
+}
+[data-bs-theme="dark"] .card-text {
+    color: #a0a0a0;
+}
+
+/* السعر */
+[data-bs-theme="dark"] .hotel-price {
+    background: #3a3522;
+    color: #f5c542;
+}
+
+/* زر الخط الخارجي */
+[data-bs-theme="dark"] .btn-outline-green {
+    border-color: #198754;
+    color: #8fdfb4;
+}
+[data-bs-theme="dark"] .btn-outline-green:hover {
+    background: #198754;
+    color: #fff;
+}
+
+/* تذييل الصفحة */
+[data-bs-theme="dark"] .footer {
+    background: linear-gradient(135deg, #0a1e14 0%, #06120c 100%);
+}
+
+/* الجداول (صفحة الحجوزات ولوحة التحكم) */
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: #1e2124;
+    --bs-table-color: #ddd;
+}
+[data-bs-theme="dark"] .table thead th {
+    background-color: #0b4632;
+}
+
+/* نموذج البحث */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #2c3035;
+    color: #ddd;
+    border-color: #444;
+}
+
+/* صفحة تفاصيل الفندق */
+[data-bs-theme="dark"] .detail-info h2 {
+    color: #b8e4cc;
+}
+
+/* أزرار عامة */
+[data-bs-theme="dark"] .btn-solid-green {
+    background: #146c43;
+}
+[data-bs-theme="dark"] .btn-solid-green:hover {
+    background: #198754;
+}
